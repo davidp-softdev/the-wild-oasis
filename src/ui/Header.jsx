@@ -17,9 +17,8 @@ const StyledHeader = styled.header`
 function Header() {
   return (
     <StyledHeader>
-      <Logout />
-      {/* <UserAvatar />
-      <HeaderMenu /> */}
+      <UserAvatar />
+      <HeaderMenu />
     </StyledHeader>
   );
 }
