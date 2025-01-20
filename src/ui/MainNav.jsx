@@ -58,7 +58,7 @@ function MainNav() {
     <nav>
       <NavList>
         <li>
-          <StyledNavLink to="/dashboard">
+          <StyledNavLink to="/dashboard?last=30">
             <HiOutlineHome />
             <span>Home</span>
           </StyledNavLink>
