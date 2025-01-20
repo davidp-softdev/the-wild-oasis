@@ -21,6 +21,14 @@ const StyledConfirmDelete = styled.div`
 `;
 
 function ConfirmDelete({ resourceName, onConfirm, disabled, onCloseModal }) {
+  // const { close } = useContext(ModalContext);
+
+  // Disable deletion in production
+  // const handleConfirm = () => {
+  //   toast.error("Cannot Delete in production. Sorry!");
+  //   close(); // Close the modal directly
+  // };
+
   return (
     <StyledConfirmDelete>
       <Heading as="h3">Delete {resourceName}</Heading>

@@ -18,6 +18,7 @@ import { formatCurrency } from "../../utils/helpers";
 import { formatDistanceFromNow } from "../../utils/helpers";
 import { useCheckout } from "../check-in-out/useCheckout";
 import { useDeleteBooking } from "./useDeleteBooking";
+import toast from "react-hot-toast";
 
 const Cabin = styled.div`
   font-size: 1.6rem;
@@ -137,6 +138,10 @@ function BookingRow({
             resourceName="booking"
             disabled={isDeleting}
             onConfirm={() => deleteBooking(bookingId)}
+            // onConfirm={() => {
+            //   toast.error("Cannot Delete in production. Sorry!");
+            //   navigate(-1);
+            // }}
           />
         </Modal.Window>
       </Modal>

@@ -18,6 +18,7 @@ import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import { useDeleteBooking } from "./useDeleteBooking";
 import Empty from "../../ui/Empty";
+import { toast } from "react-hot-toast";
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -82,6 +83,10 @@ function BookingDetail() {
             <ConfirmDelete
               resourceName="booking"
               disabled={isDeleting}
+              // onConfirm={() => {
+              //   toast.error("Cannot Delete in production. Sorry!");
+              //   navigate(-1);
+              // }}
               onConfirm={() =>
                 deleteBooking(bookingId, {
                   onSettled: () => navigate(-1),
